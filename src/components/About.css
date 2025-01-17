@@ -1,0 +1,99 @@
+/* Container Styling */
+.about-container {
+    padding: 40px;
+    max-width: 800px;
+    margin: 50px auto;
+    background: #f9f9f9; /* Light background color for a soft look */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    line-height: 1.8;
+    color: #333333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.3s ease;
+    animation: fadeIn 1.5s ease-in-out; /* Add fade-in animation */
+  }
+  
+  /* Title Styling */
+  .about-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333; 
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease;
+    animation: slideInFromTop 1s ease-out; /* Slide-in animation for title */
+  }
+  
+  /* Paragraph Styling */
+  .about-paragraph {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+    animation: fadeIn 2s ease-in-out; /* Fade-in animation for paragraphs */
+  }
+  
+  /* Highlighted Text */
+  .about-paragraph strong {
+    font-weight: 600;
+    color: #00adb5; /* Blue color for the name */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-container {
+      padding: 30px;
+      margin: 30px auto;
+    }
+  
+    .about-title {
+      font-size: 28px; /* Smaller title font for smaller screens */
+    }
+  
+    .about-paragraph {
+      font-size: 16px; /* Smaller text for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about-container {
+      padding: 20px;
+      margin: 20px auto;
+    }
+  
+    .about-title {
+      font-size: 24px; /* Adjust title font for very small devices */
+    }
+  
+    .about-paragraph {
+      font-size: 14px; /* Adjust paragraph font */
+    }
+  }
+  
+  /* Keyframes for Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInFromTop {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  .about-container:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  }
+  

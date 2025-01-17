@@ -1,0 +1,134 @@
+/* Global Styling */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+  color: #333333;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Container Styling */
+.app-container {
+  text-align: center;
+  padding: 20px;
+  animation: fadeIn 1.5s ease-in-out; /* Animation on page load */
+}
+
+/* Profile Image */
+.profile-image {
+  width: 150px; /* Responsive size */
+  height: 150px; /* Match width for circular image */
+  border-radius: 50%;
+  border: 3px solid #00adb5;
+  margin-bottom: 20px;
+  animation: bounceIn 1.5s ease-in-out; /* Add bounce animation */
+}
+
+/* "Hi there!" Text */
+.intro-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #4a4a4a;
+  animation: slideInLeft 1s ease-in-out; /* Slide animation */
+}
+
+/* Name Text in Special Cursive Font */
+.name-text {
+  font-size: 2rem;
+  font-family: 'Great Vibes', cursive;
+  color: #00adb5;
+  margin: 10px 0;
+  animation: slideInRight 1s ease-in-out; /* Slide animation */
+}
+
+/* Description Text */
+.description-text {
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.6;
+  color: #666666;
+  max-width: 600px;
+  margin: 0 auto;
+  animation: fadeIn 2s ease-in-out; /* Subtle fade-in animation */
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .intro-text,
+  .name-text {
+    font-size: 1.8rem; /* Adjust font sizes */
+  }
+
+  .description-text {
+    font-size: 1rem; /* Smaller description for mobile */
+    padding: 0 10px; /* Add padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .intro-text,
+  .name-text {
+    font-size: 1.5rem; /* Adjust for small devices */
+  }
+
+  .description-text {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,118 @@
+/* Skills Page Styling */
+.skills-page {
+    padding: 50px;
+    background-color: #f4f4f9;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  .skills-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    animation: slideInFromTop 1s ease-out;
+  }
+  
+  .skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  .skill-set {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .skill-set:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .skill-category {
+    font-size: 1.5rem;
+    color: #00adb5;
+    margin-bottom: 10px;
+    animation: slideInFromLeft 1.2s ease-out;
+  }
+  
+  .skill-list {
+    list-style-type: none;
+    padding-left: 0;
+    animation: fadeIn 1.2s ease-in-out;
+  }
+  
+  .skill-list li {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
+  }
+  
+  .skill-list li:hover {
+    color: #00adb5;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInFromTop {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInFromLeft {
+    from {
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .skills-page {
+      padding: 30px;
+    }
+  
+    .skills-title {
+      font-size: 2rem;
+    }
+  
+    .skills-container {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+  
+    .skill-category {
+      font-size: 1.3rem;
+    }
+  
+    .skill-list li {
+      font-size: 1rem;
+    }
+  }
+  

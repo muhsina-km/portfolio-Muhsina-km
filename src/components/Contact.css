@@ -1,0 +1,129 @@
+.contact-container {
+    padding: 40px;
+    max-width: 600px;
+    margin: 50px auto;
+    background: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInContact 1.5s ease-in-out; /* Fade-in animation for the container */
+  }
+  
+  .contact-container:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  }
+  
+  .contact-title {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    animation: slideInFromTop 1s ease-out; /* Slide-in animation for the title */
+  }
+  
+  .contact-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contact-list li {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 15px 0;
+    font-size: 18px;
+    color: #555;
+    transition: color 0.3s ease, transform 0.3s ease;
+    animation: slideInFromLeft 1s ease-out; /* Slide-in animation for list items */
+  }
+  
+  .contact-list li:hover {
+    transform: translateX(10px); /* Slide slightly on hover */
+    color: #00adb5; /* Change text color on hover */
+  }
+  
+  .contact-icon {
+    font-size: 24px;
+    color: #00adb5;
+    margin-right: 10px;
+    /* animation: bounce 2s infinite;  */
+  }
+  
+  .contact-link {
+    color: #00adb5;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .contact-link:hover {
+    color: #008c9e; /* Darker blue on hover */
+  }
+  
+  .contact-text {
+    color: #555;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-container {
+      padding: 20px;
+    }
+  
+    .contact-title {
+      font-size: 24px;
+    }
+  
+    .contact-list li {
+      font-size: 16px;
+    }
+  
+    .contact-icon {
+      font-size: 20px;
+    }
+  }
+  
+  @keyframes fadeInContact {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideInFromTop {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInFromLeft {
+    from {
+      transform: translateX(-30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+  
