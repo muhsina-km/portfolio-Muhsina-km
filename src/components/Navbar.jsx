@@ -25,8 +25,6 @@ function ResponsiveAppBar() {
               flexGrow: 1,
               display: 'flex',
               justifyContent: 'center',
-              flexWrap: 'wrap',
-              gap: {xs:1,sm:2},
             }}
           >
             <Button
