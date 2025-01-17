@@ -7,50 +7,6 @@ body {
   overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
-/* Navbar Styling */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  background: #00adb5;
-  color: white;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: background 0.3s ease;
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  margin: 0 10px;
-  transition: color 0.3s ease;
-}
-
-.navbar a:hover {
-  color: #e0f7fa;
-}
-
-.navbar-logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.navbar-links {
-  display: flex;
-  gap: 20px;
-}
-
-@media (max-width: 768px) {
-  .navbar-links {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
 /* Home Page Container */
 .app-container {
   text-align: center;
