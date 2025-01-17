@@ -17,7 +17,7 @@ const pages = [
 
 function ResponsiveAppBar() {
   return (
-    <AppBar position="static" sx={{ backgroundColor: '#333333' }}>
+    <AppBar position="fixed" sx={{ backgroundColor: '#333333' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box
@@ -25,6 +25,8 @@ function ResponsiveAppBar() {
               flexGrow: 1,
               display: 'flex',
               justifyContent: 'center',
+              flexWrap: 'wrap',
+              gap: {xs:1,sm:2},
             }}
           >
             <Button
