@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 import HomeIcon from '@mui/icons-material/Home';
 
 const pages = [
-  { name: 'ABOUT', path: '/about' },
+  { name: 'ABOUT', path: '/' },
   { name: 'SKILLS', path: '/skills' },
   { name: 'WORKS', path: '/works' },
   { name: 'RESUME', path: '/resume' },
@@ -17,7 +17,8 @@ const pages = [
 
 function ResponsiveAppBar() {
   return (
-    <AppBar position="fixed" sx={{ backgroundColor: '#333333' }}>
+    <AppBar position="fixed" 
+    sx={{ backgroundColor: '#333333'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box
@@ -27,18 +28,7 @@ function ResponsiveAppBar() {
               justifyContent: 'center',
             }}
           >
-            <Button
-              sx={{
-                my: 2,
-                color: 'white',
-                // display: 'block',
-                // textTransform: 'uppercase', 
-              }}
-              component={Link}
-              to="/" 
-            >
-             <HomeIcon />
-            </Button>
+
             {pages.map((page) => (
               <Button
                 key={page.name}

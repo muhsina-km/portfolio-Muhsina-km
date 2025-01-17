@@ -3,7 +3,7 @@ import './Resume.css';
 
 const Resume = () => {
   return (
-    <div className="resume-page"> 
+    <div className="resume-page" style={{ marginTop: '50px' }}> 
     <center>
       <h1 className="resume-title">My Journey So Far</h1>
       </center>
@@ -58,7 +58,6 @@ const Resume = () => {
               Developed a MERN stack application with features like secure login, dynamic product catalog, advanced search, 
               and a seamless shopping experience.
             </p>
-            <p><strong>Role:</strong> Full-stack Developer</p>
           </li>
           <li>
             <strong>Hospital Management System</strong>
@@ -66,7 +65,6 @@ const Resume = () => {
               Created a Java-based application for managing hospital workflows, integrating Spring Framework and Hibernate 
               for backend processes.
             </p>
-            <p><strong>Role:</strong> Backend Developer</p>
           </li>
         </ul>
       </section>
@@ -74,7 +72,7 @@ const Resume = () => {
       <section className="technical-proficiency">
         <h3>Technical Proficiency</h3>
         <div className="skills-list">
-          <div className="skills-category">
+          <div className="skills-category"> 
             <strong>Frontend:</strong> HTML, CSS, JavaScript, React.js, Bootstrap
           </div>
           <div className="skills-category">

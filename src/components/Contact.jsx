@@ -4,6 +4,9 @@ import './Contact.css';
 
 const ContactPage = () => {
   return (
+    <div style={{ marginTop: '50px' }}>
+      <br />
+   
     <div className="contact-container">
       <h1 className="contact-title">Get in Touch</h1>
       <ul className="contact-list">
@@ -42,6 +45,7 @@ const ContactPage = () => {
           </a>
         </li>
       </ul>
+    </div>
     </div>
   );
 };
