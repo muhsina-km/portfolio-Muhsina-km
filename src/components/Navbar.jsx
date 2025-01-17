@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
-import { Link } from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
 
 const pages = [
   { name: 'HOME', path: '/' },
@@ -15,7 +15,7 @@ const pages = [
   { name: 'CONTACT', path: '/contact' },
 ];
 
-function ResponsiveAppBar() {
+function Navbar() {
   return (
     <AppBar position="static" sx={{ backgroundColor: '#333333' }}>
       <Container maxWidth="xl">
@@ -24,20 +24,27 @@ function ResponsiveAppBar() {
             sx={{
               flexGrow: 1,
               display: 'flex',
-              justifyContent: 'center',
+              flexDirection: { xs: 'column', sm: 'row' }, // Stack buttons on small screens
+              justifyContent: { xs: 'center', sm: 'space-evenly' }, // Center for mobile, evenly spaced for larger screens
+              alignItems: 'center',
+              gap: { xs: 1, sm: 0 }, // Add spacing between buttons for mobile
+              padding: { xs: 1, sm: 0 }, // Add padding for mobile
             }}
           >
             {pages.map((page) => (
               <Button
                 key={page.name}
                 sx={{
-                  my: 2,
                   color: 'white',
                   display: 'block',
-                  textTransform: 'uppercase', // Optional: makes the text uppercase
+                  width: { xs: '100%', sm: 'auto' }, // Full-width buttons on mobile
+                  textAlign: 'center',
+                  padding: '10px 20px',
+                  fontSize: { xs: '0.9rem', sm: '1rem' }, // Adjust font size for smaller screens
+                  textTransform: 'uppercase',
                 }}
                 component={Link}
-                to={page.path} // Use Link's 'to' prop for navigation
+                to={page.path}
               >
                 {page.name}
               </Button>
@@ -49,4 +56,4 @@ function ResponsiveAppBar() {
   );
 }
 
-export default ResponsiveAppBar;
+export default Navbar;

@@ -1,129 +1,183 @@
 .contact-container {
-    padding: 40px;
-    max-width: 600px;
-    margin: 50px auto;
-    background: #f9f9f9;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: fadeInContact 1.5s ease-in-out; /* Fade-in animation for the container */
+  padding: 40px;
+  max-width: 50%; /* Adjusted for better responsiveness */
+  margin: 50px auto;
+  /* background: linear-gradient(135deg, #ffffff, #f9f9f9); */
+  background: linear-gradient(to right, #e3f2fd, #f9fbe7);
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInContact 1.2s ease-in-out;
+}
+
+.contact-container:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.contact-title {
+  font-size: 2rem; /* Adjusted for responsiveness */
+  color: #222;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  animation: slideInFromTop 1s ease-out;
+}
+
+.contact-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #00adb5;
+  margin: 8px auto 0;
+  animation: expandLine 1.2s ease-out;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-list li::before {
+  content: none; /* Removes pseudo-element content if present */
+}
+
+.contact-list li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 15px 0;
+  font-size: 1rem; /* Adjusted for responsiveness */
+  color: #555;
+  transition: color 0.3s ease, transform 0.3s ease;
+  animation: slideInFromLeft 0.8s ease-out;
+  border-bottom: 1px solid #eee;
+  padding: 10px;
+}
+
+.contact-list li:last-child {
+  border-bottom: none;
+}
+
+.contact-list li:hover {
+  transform: translateX(15px); /* Slide more on hover */
+  color: #00adb5;
+  background: rgba(0, 173, 181, 0.1); /* Add subtle background on hover */
+  border-radius: 8px;
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  color: #00adb5;
+  margin-right: 10px;
+  animation: bounce 1.8s infinite;
+}
+
+.contact-link {
+  color: #00adb5;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #008c9e;
+  text-shadow: 0px 0px 5px rgba(0, 173, 181, 0.8); /* Add glowing effect */
+}
+
+.contact-text {
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+      padding: 30px;
   }
-  
-  .contact-container:hover {
-    transform: scale(1.02); /* Slight zoom on hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
-  }
-  
+
   .contact-title {
-    font-size: 32px;
-    color: #333;
-    margin-bottom: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-    animation: slideInFromTop 1s ease-out; /* Slide-in animation for the title */
+      font-size: 1.8rem;
   }
-  
-  .contact-list {
-    list-style: none;
-    padding: 0;
-  }
-  
+
   .contact-list li {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    margin: 15px 0;
-    font-size: 18px;
-    color: #555;
-    transition: color 0.3s ease, transform 0.3s ease;
-    animation: slideInFromLeft 1s ease-out; /* Slide-in animation for list items */
+      font-size: 0.95rem;
   }
-  
-  .contact-list li:hover {
-    transform: translateX(10px); /* Slide slightly on hover */
-    color: #00adb5; /* Change text color on hover */
-  }
-  
+
   .contact-icon {
-    font-size: 24px;
-    color: #00adb5;
-    margin-right: 10px;
-    /* animation: bounce 2s infinite;  */
+      font-size: 1.3rem;
   }
-  
-  .contact-link {
-    color: #00adb5;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .contact-link:hover {
-    color: #008c9e; /* Darker blue on hover */
-  }
-  
-  .contact-text {
-    color: #555;
-  }
-  
-  @media (max-width: 768px) {
-    .contact-container {
+}
+
+@media (max-width: 480px) {
+  .contact-container {
       padding: 20px;
-    }
-  
-    .contact-title {
-      font-size: 24px;
-    }
-  
-    .contact-list li {
-      font-size: 16px;
-    }
-  
-    .contact-icon {
-      font-size: 20px;
-    }
   }
-  
-  @keyframes fadeInContact {
-    from {
+
+  .contact-title {
+      font-size: 1.5rem;
+  }
+
+  .contact-list li {
+      font-size: 0.85rem;
+  }
+
+  .contact-icon {
+      font-size: 1.2rem;
+  }
+}
+
+/* Keyframes for Animations */
+@keyframes fadeInContact {
+  from {
       opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
+      transform: translateY(30px);
+  }
+  to {
       opacity: 1;
       transform: translateY(0);
-    }
   }
-  
-  @keyframes slideInFromTop {
-    from {
+}
+
+@keyframes slideInFromTop {
+  from {
       transform: translateY(-50px);
       opacity: 0;
-    }
-    to {
+  }
+  to {
       transform: translateY(0);
       opacity: 1;
-    }
   }
-  
-  @keyframes slideInFromLeft {
-    from {
+}
+
+@keyframes slideInFromLeft {
+  from {
       transform: translateX(-30px);
       opacity: 0;
-    }
-    to {
+  }
+  to {
       transform: translateX(0);
       opacity: 1;
-    }
   }
-  
-  @keyframes bounce {
-    0%, 100% {
+}
+
+@keyframes expandLine {
+  from {
+      width: 0;
+  }
+  to {
+      width: 60px;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
       transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-5px);
-    }
   }
-  
+  50% {
+      transform: translateY(-5px);
+  }
+}

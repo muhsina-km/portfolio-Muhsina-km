@@ -1,6 +1,8 @@
 import React from 'react';
 import { Image } from 'antd';
 import './Home.css'; 
+import profile from './image/profilepic.jpg'; 
+
 
 const App = () => (
   <div className="app-container">
@@ -10,7 +12,8 @@ const App = () => (
       <Image
         width={200}
         className="profile-image"
-        src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
+        src={profile}
+        alt='muhsina km'
       />
 
       {/* Introduction Text */}

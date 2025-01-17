@@ -3,11 +3,13 @@ import './Resume.css';
 
 const Resume = () => {
   return (
-    <div className="resume-page">
+    <div className="resume-page"> 
+    <center>
       <h1 className="resume-title">My Journey So Far</h1>
+      </center>
 
       <section className="career-objective">
-        <h2>Career Objective</h2>
+        <h3>Career Objective</h3>
         <p>
           As a passionate and detail-oriented software developer, I aim to leverage my expertise in modern technologies
           like the MERN stack, Java, and SQL to create innovative and user-centric solutions. With a commitment to continuous
@@ -17,20 +19,20 @@ const Resume = () => {
       </section>
 
       <section className="education">
-        <h2>Education</h2>
+        <h3>Education</h3>
         <ul>
           <li>
-            <strong>Bachelor of Computer Application</strong><br />
+            <strong>Bachelor of Computer Application - </strong><br />
             Nirmala College of Arts and Science, Chalakudy (Calicut University)<br />
             2021 – 2024 (81%)
           </li>
           <li>
-            <strong>Intermediate (Higher Secondary)</strong><br />
+            <strong>Intermediate (Higher Secondary) - </strong><br />
             GVHSS Valapad, Thrissur<br />
             2019 – 2021 (90%)
           </li>
           <li>
-            <strong>SSLC</strong><br />
+            <strong>SSLC - </strong><br />
             HS Anthikad, Thrissur<br />
             2019 (94%)
           </li>
@@ -38,7 +40,7 @@ const Resume = () => {
       </section>
 
       <section className="certifications">
-        <h2>Certifications</h2>
+        <h3>Certifications</h3>
         <ul>
           <li>6 months of training on Java Full Stack Developement - Jspiders Kochi</li>
           <li>Web Application Development using Bootstrap - Logix space Technologies Pvt Ltd</li>
@@ -48,7 +50,7 @@ const Resume = () => {
       </section>
 
       <section className="projects">
-        <h2>Projects</h2>
+        <h3>Projects</h3>
         <ul>
           <li>
             <strong>E-commerce Website for Flowering Plants</strong>
@@ -70,7 +72,7 @@ const Resume = () => {
       </section>
 
       <section className="technical-proficiency">
-        <h2>Technical Proficiency</h2>
+        <h3>Technical Proficiency</h3>
         <div className="skills-list">
           <div className="skills-category">
             <strong>Frontend:</strong> HTML, CSS, JavaScript, React.js, Bootstrap
@@ -88,7 +90,7 @@ const Resume = () => {
       </section>
 
       <section className="soft-skills">
-        <h2>Soft Skills</h2>
+        <h3>Soft Skills</h3>
         <ul>
           <li>Communication</li>
           <li>Problem Solving</li>
@@ -99,7 +101,7 @@ const Resume = () => {
       </section>
 
       <section className="strengths">
-        <h2>Strengths</h2>
+        <h3>Strengths</h3>
         <p>
           Quick learner and highly motivated to explore new technologies.<br />
           Strong analytical and problem-solving skills.

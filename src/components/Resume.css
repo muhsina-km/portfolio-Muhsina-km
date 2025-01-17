@@ -1,99 +1,178 @@
 /* General Styling */
 .resume-page {
-    padding: 50px;
-    background-color: #f9f9f9;
-    animation: fadeIn 1.5s ease-in-out;
+  padding: 50px;
+  background: linear-gradient(to right, #e3f2fd, #f9fbe7);
+  animation: fadeIn 1.5s ease-in-out;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+.resume-title {
+  font-size: 2rem; /* Adjusted for responsiveness */
+  color: #222;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  animation: slideInFromTop 1s ease-out;
+}
+
+.resume-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #00adb5;
+  margin: 8px auto 0;
+  animation: expandLine 1.2s ease-out;
+}
+
+section {
+  margin-bottom: 40px;
+  border-left: 4px solid #333;
+  padding-left: 20px;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+h3 {
+  font-size: 2rem;
+  color: #00adb5;
+  margin-bottom: 10px;
+  animation: fadeIn 1.2s ease-in-out;
+  position: relative;
+}
+
+h3::after {
+  display: block;
+  width: 50px;
+  height: 4px;
+  background-color: #00adb5;
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 12px;
+  animation: slideInFromLeft 1.2s ease-out;
+  display: flex;
+  align-items: center;
+}
+
+ul li::before {
+  content: "✔";
+  color: #00adb5;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+section p {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.6;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Buttons for Interactivity */
+button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #00adb5;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+button:hover {
+  background-color: #008c9e;
+  transform: translateY(-5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .resume-page {
+    padding: 20px;
+  }
+
   .resume-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    text-align: center;
-    color: #333;
-    margin-bottom: 30px;
-    animation: slideInFromTop 1s ease-out;
-  }
-  
-  section {
-    margin-bottom: 40px;
-  }
-  
-  h2 {
     font-size: 2rem;
-    color: #00adb5;
-    margin-bottom: 10px;
-    animation: fadeIn 1.2s ease-in-out;
   }
-  
-  ul {
-    list-style-type: none;
-    padding-left: 0;
+
+  h3 {
+    font-size: 1.8rem;
   }
-  
+
   ul li {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 12px;
-    animation: slideInFromLeft 1.2s ease-out;
+    font-size: 1rem;
   }
-  
+
   section p {
-    font-size: 1.2rem;
-    color: #666;
+    font-size: 1rem;
   }
-  
-  /* Animations */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+
+  button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
   }
-  
-  @keyframes slideInFromTop {
-    from {
-      transform: translateY(-50px);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
+}
+
+@media (max-width: 480px) {
+  .resume-title {
+    font-size: 1.8rem;
   }
-  
-  @keyframes slideInFromLeft {
-    from {
-      transform: translateX(-50px);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
+
+  h3 {
+    font-size: 1.5rem;
   }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .resume-page {
-      padding: 20px;
-    }
-  
-    .resume-title {
-      font-size: 2rem;
-    }
-  
-    h2 {
-      font-size: 1.8rem;
-    }
-  
-    ul li {
-      font-size: 1rem;
-    }
-  
-    section p {
-      font-size: 1rem;
-    }
+
+  ul li {
+    font-size: 0.9rem;
   }
-  
+
+  section p {
+    font-size: 0.9rem;
+  }
+}
