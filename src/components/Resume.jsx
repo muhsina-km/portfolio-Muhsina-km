@@ -55,15 +55,21 @@ const Resume = () => {
           <li>
             <strong>E-commerce Website for Flowering Plants</strong>
             <p>
-              Developed a MERN stack application with features like secure login, dynamic product catalog, advanced search, 
-              and a seamless shopping experience.
+            Developed an e-commerce website for flowering plants using the MERN stack, 
+            offering features like secure user authentication, dynamic product catalogs, 
+            and advanced search filters. Enabled users to track ordersand streamlined inventory 
+            management for admins. Designed a responsive interface 
+            for seamless shopping across all devices.
             </p>
           </li>
           <li>
             <strong>Hospital Management System</strong>
             <p>
-              Created a Java-based application for managing hospital workflows, integrating Spring Framework and Hibernate 
-              for backend processes.
+            Developed a hospital management system with a user-friendly interface and robust backend using Java. 
+            Utilized MySQL/PostgreSQL with JDBC for managing patient records, staff details, and medical inventory. 
+            Implemented Spring and Hibernate frameworks for efficient data handling and application management. 
+            Employed Git for version control and JUnit for thorough testing, ensuring system reliability and 
+            performance. Development was conducted using Eclipse/IntelliJ IDEA.
             </p>
           </li>
         </ul>
@@ -72,18 +78,28 @@ const Resume = () => {
       <section className="technical-proficiency">
         <h3>Technical Proficiency</h3>
         <div className="skills-list">
+          <ul>
           <div className="skills-category"> 
+            <li>
             <strong>Frontend:</strong> HTML, CSS, JavaScript, React.js, Bootstrap
+            </li>
           </div>
           <div className="skills-category">
+          <li>
             <strong>Backend:</strong> Java (Spring Framework, Hibernate), Node.js
+            </li>
           </div>
           <div className="skills-category">
+            <li>
             <strong>Database:</strong> MySQL, MongoDB, PostgreSQL
+            </li>
           </div>
           <div className="skills-category">
+            <li>
             <strong>Tools:</strong> Git, Eclipse, VS Code
+            </li>
           </div>
+          </ul>
         </div>
       </section>
 
@@ -101,8 +117,10 @@ const Resume = () => {
       <section className="strengths">
         <h3>Strengths</h3>
         <p>
-          Quick learner and highly motivated to explore new technologies.<br />
-          Strong analytical and problem-solving skills.
+          <ul>
+          <li>Quick learner and highly motivated to explore new technologies.</li>
+          <li>Strong analytical and problem-solving skills.</li>
+          </ul>
         </p>
       </section>
     </div>
